@@ -1,1 +1,11 @@
 # s2u2m-blog-engine
+
+## Web
+
+- [Vue](https://vuejs.org/)
+- [Vue with webpack](https://vuejs-templates.github.io/webpack/)
+
+## Reference
+
+- [ES6 入门](http://es6.ruanyifeng.com/)
+- [30个极大提高开发效率的Visual Studio Code插件](https://blog.fundebug.com/2018/07/24/vs-extensions/)
