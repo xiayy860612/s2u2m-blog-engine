@@ -5,6 +5,10 @@
 - [Vue](https://vuejs.org/)
 - [Vue with webpack](https://vuejs-templates.github.io/webpack/)
 
+## Server
+
+- [Spring Web MVC](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#spring-web)
+
 ## Reference
 
 - [ES6 入门](http://es6.ruanyifeng.com/)
