@@ -1,5 +1,9 @@
 # s2u2m-blog-engine
 
+|module|master|dev|
+|:---|:----:|:----:|
+|server||[![Build Status](https://travis-ci.com/xiayy860612/s2u2m-blog-engine.svg?branch=dev)](https://travis-ci.com/xiayy860612/s2u2m-blog-engine)|
+
 ## Web
 
 - [Vue](https://vuejs.org/)

@@ -6,7 +6,12 @@ branches:
   only:
     - master
     - dev
-    - /^issues#\d+[-\w]+
+    - /^issues#\d+-.+$/
+
+install:
+  - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
+  - sudo unzip sonar-scanner-cli-3.2.0.1227-linux.zip
+  - export PATH=$PATH:$PWD/sonar-scanner-3.2.0.1227-linux/bin/
 
 before_script:
   - cd server
@@ -16,3 +21,4 @@ script:
   - mvn test -B
   - mvn jxr:jxr
   - mvn pmd:check
+  - sonar-scanner
