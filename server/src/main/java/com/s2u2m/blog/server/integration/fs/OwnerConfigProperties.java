@@ -15,22 +15,28 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.s2u2m.blog.server.domain.entity.owner;
+package com.s2u2m.blog.server.integration.fs;
 
 import com.s2u2m.blog.server.constant.ContactEnum;
-import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import java.util.Map;
 
 /**
- * OwnerEntity create on 18-12-27.
+ * OwnerConfigProperties create on 18-12-29.
  *
  * @author Amos Xia
  */
 @Getter
-@Builder
-public class OwnerEntity {
+@Setter
+@Configuration
+@PropertySource(value = "classpath:owner.properties")
+@ConfigurationProperties(prefix = "s2u2m.blog.owner")
+public class OwnerConfigProperties {
     private String username;
     private String avatar;
     private String motto;

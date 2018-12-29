@@ -15,31 +15,27 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.s2u2m.blog.server.domain.repository;
+package com.s2u2m.blog.server.integration.fs;
 
-import com.s2u2m.blog.server.domain.entity.owner.OwnerEntity;
-import com.s2u2m.blog.server.integration.fs.OwnerConfigProperties;
+import com.s2u2m.blog.server.BaseS2u2mSpringTest;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+
+import static org.junit.Assert.assertEquals;
 
 /**
- * OwnerRepositoryImpl create on 18-12-27.
+ * OwnerConfigPropertiesTest create on 18-12-29.
  *
  * @author Amos Xia
  */
-@Repository
-public class OwnerRepositoryImpl implements OwnerRepository {
+public class OwnerConfigPropertiesTest extends BaseS2u2mSpringTest {
 
     @Autowired
     private OwnerConfigProperties ownerConfigProperties;
 
-    @Override
-    public OwnerEntity getOwner() {
-        return OwnerEntity.builder()
-                .username(ownerConfigProperties.getUsername())
-                .avatar(ownerConfigProperties.getAvatar())
-                .motto(ownerConfigProperties.getMotto())
-                .contacts(ownerConfigProperties.getContacts())
-                .build();
+    @Test
+    public void loadOwnerProperties() {
+        assertEquals("Test", ownerConfigProperties.getUsername());
     }
+
 }

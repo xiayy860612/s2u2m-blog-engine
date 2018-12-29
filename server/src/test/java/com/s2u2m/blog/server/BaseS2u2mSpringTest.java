@@ -15,24 +15,18 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.s2u2m.blog.server.domain.entity.owner;
+package com.s2u2m.blog.server;
 
-import com.s2u2m.blog.server.constant.ContactEnum;
-import lombok.Builder;
-import lombok.Getter;
-
-import java.util.Map;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * OwnerEntity create on 18-12-27.
+ * BaseS2u2mSpringTest create on 18-12-29.
  *
  * @author Amos Xia
  */
-@Getter
-@Builder
-public class OwnerEntity {
-    private String username;
-    private String avatar;
-    private String motto;
-    private Map<ContactEnum, String> contacts;
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public abstract class BaseS2u2mSpringTest {
 }

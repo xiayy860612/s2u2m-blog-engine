@@ -1,0 +1,18 @@
+dist: xenial
+language: java
+jdk: oraclejdk11
+
+branches:
+  only:
+    - master
+    - dev
+    - /^issues#\d+[-\w]+
+
+before_script:
+  - cd server
+
+script:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn test -B
+  - mvn jxr:jxr
+  - mvn pmd:check
