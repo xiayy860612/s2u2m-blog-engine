@@ -1,0 +1,15 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - S2u2mBlogEngineServerApplication",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopOnEntry": false,
+      "mainClass": "com.s2u2m.blogengine.s2u2mblogengineserver.S2u2mBlogEngineServerApplication",
+      "args": "",
+      "projectName": "s2u2m-blog-engine-server"
+    }
+  ]
+}
